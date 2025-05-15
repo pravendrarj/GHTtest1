@@ -36,3 +36,31 @@ namespace BikeShopAPI.Test.Controllers
 
     }
 }
+[Fact]
+public void BikeMalfunction_ReturnsNotFound_WhenBikeShopDoesNotExist()
+{
+    // Act
+    var result = _controller.BikeMalfunction(999, 1);
+
+    // Assert
+    var notFoundResult = Assert.IsType<NotFoundObjectResult>(result);
+    Assert.Equal("Bike not found in the specified bike shop.", notFoundResult.Value);
+}
+
+[Fact]
+public void BikeMalfunction_ReturnsNotFound_WhenBikeDoesNotExist()
+{
+    // Act
+    var result = _controller.BikeMalfunction(1, 999);
+
+    // Assert
+    var notFoundResult = Assert.IsType<NotFoundObjectResult>(result);
+    Assert.Equal("Bike not found in the specified bike shop.", notFoundResult.Value);
+}
+
+[Fact]
+public void BikeMalfunction_ThrowsStackOverflowException_DueToRecursion()
+{
+    // Act & Assert
+    Assert.Throws<StackOverflowException>(() => _controller.BikeMalfunction(1, 1));
+}
