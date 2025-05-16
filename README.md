@@ -1,6 +1,6 @@
 # Introduction to GitHub Copilot Workshop
 
-## Demo repository for GitHub Copilot
+## Demo repository for GitHub Copilot.
 
 Welcome to our workshop on GitHub Copilot! This AI-powered tool is designed to assist you in writing code by suggesting lines or blocks of code as you type. It’s like having a pair programming partner who can help you navigate through your coding journey.
 
@@ -26,4 +26,4 @@ Remember, GitHub Copilot is a tool designed to assist you, but it doesn’t repl
 
 ---
 > [!IMPORTANT]
-> Labs instructions can be found [here](labs).
+> Labs instructions can be found [here](labs)..
